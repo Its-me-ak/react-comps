@@ -2,7 +2,8 @@ import React from 'react'
 import classNames from 'classnames'
 import { twMerge } from 'tailwind-merge';
 
-const Button = ({ children, primary, secondary, success, warning, danger, outline, rounded, onClick }) => {
+const Button = ({ children, primary, secondary, success, warning, danger, outline, rounded, ...rest }) => {
+  console.log(rest);
   const classes = twMerge(
     classNames('px-3 py-2 border flex items-center', {
       'border-blue-500 bg-blue-600 text-white': primary,
@@ -20,7 +21,7 @@ const Button = ({ children, primary, secondary, success, warning, danger, outlin
   return (
     <div>
 
-      <button className={classes} onClick={onClick}>{children}</button>
+      <button {...rest} className={classes}>{children}</button>
     </div>
   )
 }
