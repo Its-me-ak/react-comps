@@ -9,11 +9,11 @@ function App() {
     <div className="app">
       <h1 className='text-red-800 font-extrabold'>Tailwind</h1>
       <div>
-        <Button success rounded outline onClick={handleClick}> <GoBell className='mr-1' /> Click Me</Button>
+        <Button success rounded outline onClick={handleClick} className="mb-5"> <GoBell className='mr-1' /> Click Me</Button>
       </div>
 
       <div>
-        <Button danger outline> <GoCheckCircle className='mr-1' /> Buy Now</Button>
+        <Button danger outline onMouseEnter={handleClick}> <GoCheckCircle className='mr-1' /> Buy Now</Button>
       </div>
 
       <div>
