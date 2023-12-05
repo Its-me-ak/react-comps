@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from './Button';
+import { GoBell, GoCheckCircle, GoHomeFill } from "react-icons/go";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1 className='text-red-800 font-extrabold'>Tailwind</h1>
+      <div>
+        <Button success rounded outline> <GoBell className='mr-1' /> Click Me</Button>
+      </div>
+
+      <div>
+        <Button danger outline> <GoCheckCircle className='mr-1' /> Buy Now</Button>
+      </div>
+
+      <div>
+        <Button warning> <GoHomeFill className='mr-1' /> Read More</Button>
+      </div>
+
+      <div>
+        <Button secondary outline>Send Now</Button>
+      </div>
+      
+      <div>
+        <Button primary rounded>Accept</Button>
+      </div>
     </div>
   );
 }
