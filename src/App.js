@@ -2,11 +2,14 @@ import Button from './Button';
 import { GoBell, GoCheckCircle, GoHomeFill } from "react-icons/go";
 
 function App() {
+  const handleClick = () =>{
+    console.log("clicked!!");
+  }
   return (
     <div className="app">
       <h1 className='text-red-800 font-extrabold'>Tailwind</h1>
       <div>
-        <Button success rounded outline> <GoBell className='mr-1' /> Click Me</Button>
+        <Button success rounded outline onClick={handleClick}> <GoBell className='mr-1' /> Click Me</Button>
       </div>
 
       <div>
