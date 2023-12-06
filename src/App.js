@@ -1,34 +1,28 @@
-import Button from './Components/Button';
-import { GoBell, GoCheckCircle, GoHomeFill } from "react-icons/go";
+import Accordion from "./Components/Accordion";
 
 function App() {
-  const handleClick = () =>{
-    console.log("clicked!!");
-  }
+  const items = [
+    {
+      id:1,
+      label: 'Can I use React for a website',
+      content: 'You can use React on any website you want to create'
+    },
+    {
+      id:2,
+      label: 'Can I use CSS for a website',
+      content: 'You can use CSS on any website you want to create'
+    },
+    {
+      id:3,
+      label: 'Can I use JavaScript for a website',
+      content: 'You can use JavaScript on any website you want to create'
+    }
+  ];
   return (
-    <div className="app">
-      <h1 className='text-red-800 font-extrabold'>Tailwind</h1>
-      <div>
-        <Button success rounded outline onClick={handleClick} className="mb-5"> <GoBell className='mr-1' /> Click Me</Button>
-      </div>
-
-      <div>
-        <Button danger outline onMouseEnter={handleClick}> <GoCheckCircle className='mr-1' /> Buy Now</Button>
-      </div>
-
-      <div>
-        <Button warning> <GoHomeFill className='mr-1' /> Read More</Button>
-      </div>
-
-      <div>
-        <Button secondary outline>Send Now</Button>
-      </div>
-      
-      <div>
-        <Button primary rounded>Accept</Button>
-      </div>
-    </div>
-  );
+    <>
+      <Accordion items={items} />
+    </>
+  )
 }
 
 export default App;
