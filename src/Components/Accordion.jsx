@@ -10,14 +10,17 @@ const Accordion = ({ items }) => {
     const isExpended = index === expendedIndex;
 
     const icon = <span>
-      {isExpended ? 'DOWN': 'LEFT'}
+      {isExpended ? 'DOWN' : 'LEFT'}
     </span>
-    console.log(icon);
 
     return (
       <div key={item.id}>
         {/* <div onClick={()=>{setExpendedIndex(index)}}>{item.label}</div> */}
-        <div onClick={() => { handleClick(index) }}>{item.label}</div>
+        <div onClick={() => { handleClick(index) }}>
+          {icon}
+          {item.label}
+
+        </div>
 
         {isExpended && <div>{item.content}</div>}
       </div>
