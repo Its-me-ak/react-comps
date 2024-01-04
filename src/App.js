@@ -1,26 +1,15 @@
-import Accordion from "./Components/Accordion";
+// import ButtonPage from "./Pages/ButtonPage";
+import Dropdown from "./Components/Dropdown";
 
 function App() {
-  const items = [
-    {
-      id:1,
-      label: 'Can I use React for a website',
-      content: 'You can use React on any website you want to create'
-    },
-    {
-      id:2,
-      label: 'Can I use CSS for a website',
-      content: 'You can use CSS on any website you want to create'
-    },
-    {
-      id:3,
-      label: 'Can I use JavaScript for a website',
-      content: 'You can use JavaScript on any website you want to create'
-    }
-  ];
+const options = [
+  {label: 'Red', value: 'red'},
+  { label: 'Green', value: 'green' },
+  { label: 'Blue', value: 'blue' }
+]
   return (
     <>
-      <Accordion items={items} />
+      <Dropdown  options={options}/>
     </>
   )
 }
