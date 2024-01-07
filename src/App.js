@@ -6,6 +6,7 @@ function App() {
   const[selection , setSelection] = useState(null);
 
   const handleSelect = (option) =>{
+    // console.log(option);
     setSelection(option)
   }
 const options = [
@@ -15,7 +16,10 @@ const options = [
 ]
   return (
     <>
-      <Dropdown  options={options} selection = {selection} onSelect = {handleSelect}/>
+      <div className="flex">
+        <Dropdown options={options} value={selection} onChange={handleSelect} />
+        <Dropdown options={options} value={selection} onChange={handleSelect} />
+      </div>
     </>
   )
 }
