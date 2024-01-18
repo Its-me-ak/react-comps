@@ -11,15 +11,21 @@ const Dropdown = ({ options, value, onChange }) => {
   }
 
   const divEl = useRef();
-
   useEffect(()=>{
     const handler = (event) =>{
       // console.log(event.target);
       console.log(divEl.current);
+      if(!divEl.current){
+        return;
+      }
+      if(!divEl.current.contains(event.target)){
+        setIsOpen(false)
+        console.log("working");
+      }
     }
     document.addEventListener("click", handler, true)
 
-    return () =>{
+    return ()=>{
       document.removeEventListener("click", handler)
     }
   }, [])

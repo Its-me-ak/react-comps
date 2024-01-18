@@ -1,4 +1,3 @@
-// import ButtonPage from "./Pages/ButtonPage";
 import { useState } from "react";
 import Dropdown from "./Components/Dropdown";
 
@@ -18,7 +17,7 @@ function App() {
     <>
       <div className="flex">
         <Dropdown options={options} value={selection} onChange={handleSelect} />
-        {/* <Dropdown options={options} value={selection} onChange={handleSelect} /> */}
+        <Dropdown options={options} value={selection} onChange={handleSelect} />
       </div>
     </>
   )
