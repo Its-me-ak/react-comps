@@ -22,7 +22,6 @@ function AccordionPage() {
     return (
         <>
             <Accordion items={items} />
-            <ButtonPage />
         </>
     )
 }

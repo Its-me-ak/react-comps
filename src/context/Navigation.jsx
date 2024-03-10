@@ -11,13 +11,13 @@ const NavigationProvider = ({children}) => {
         }
         window.addEventListener("popstate", handler);
 
-        return () =>{
+        return () => {
             window.removeEventListener("popstate", handler);
         }
 
     }, [])
 
-    const navigate = (to) =>{
+    const navigate = (to) => {
         window.history.pushState({}, '', to)
         setCurrentPath(to);
     }
@@ -28,4 +28,5 @@ const NavigationProvider = ({children}) => {
     )
 }
 
-export default NavigationProvider;
+export { NavigationProvider }
+export default NavigationContext;
