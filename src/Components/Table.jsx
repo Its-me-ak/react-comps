@@ -14,14 +14,13 @@ const Table = ({ data, config, keyFn }) => {
         })
         return (
             <tr className='border-b' key={keyFn(rowData)}>
-            
                 {renderdCells}
             </tr>
         )
     })
     return (
         <>
-            <table className='table-auto border-spacing-2'>
+            <table className='table-auto w-96 border-spacing-2 text-center'>
                 <thead>
                     <tr className='border-b-2'>
                         {renderedHeaders}
